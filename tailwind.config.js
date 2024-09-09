@@ -2,7 +2,13 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [],
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    './app/Filament/**/*.php',
+    './resources/views/**/*.blade.php',
+    './vendor/filament/**/*.blade.php',
+  ],
   theme: {
     extend: {
         colors: {
