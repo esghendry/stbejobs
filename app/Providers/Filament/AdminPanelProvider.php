@@ -60,7 +60,7 @@ class AdminPanelProvider extends PanelProvider
             ->plugins([
                 FilamentSocialitePlugin::make()->providers([
                     Provider::make('azure')
-                        ->label('Azure')
+                        ->label('ESG (Microsoft)')
                         ->icon('fab-microsoft'),
                 ])
                     ->registration(true),

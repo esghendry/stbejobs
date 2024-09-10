@@ -50,6 +50,39 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property string|null $title_1
+ * @property string|null $title_2
+ * @property string|null $subtitle_1
+ * @property string|null $subtitle_2
+ * @property string|null $body
+ * @property string|null $summary
+ * @property string|null $image
+ * @property string $lang
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|Page newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereBody($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereSubtitle1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereSubtitle2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereSummary($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle1($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereTitle2($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereUpdatedAt($value)
+ */
+	class Page extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
  * @property string $name
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
