@@ -12,6 +12,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 class PageResource extends Resource
@@ -71,7 +72,15 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
-                //
+                TextColumn::make('id')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('slug'),
+                TextColumn::make('lang')
+                    ->label('Language'),
+                TextColumn::make('title_1')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('title_2')
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
