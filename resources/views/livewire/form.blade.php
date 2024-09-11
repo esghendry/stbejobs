@@ -1,6 +1,4 @@
 <div>
-    
-
     <div class="px-2 py-2 pb-4 text-xs font-medium text-gray-900">
         <div class="w-full text-base font-bold text-gray-900">
             {{ $lang['title'] }}
@@ -8,8 +6,7 @@
         {{ $lang['subtitle'] }}
     </div>
     <div class="grid grid-cols-4 gap-2 p-2 pb-6">
-        <input type="hidden" name="source" required="true"
-            value="{{ $page->slug }}"
+        <input type="hidden" name="source" required="true" value="{{ $page->slug }}"
             class="hover:bg-blue-50 block py-2.5 px-1 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 hover:border-blue-300 focus:border-blue-600 focus:bg-white peer"
             placeholder=" ">
 
@@ -82,11 +79,8 @@
                     </div>
                     <div class="text-sm ms-3">
                         {{ $lang['labels']['terms'] }}
-                        <button type="button"
-                            class="font-medium text-red-600 decoration-2 hover:underline"
-                            data-hs-overlay="#hs-basic-modal"
-                            data-modal-url="/algemene-voorwaarden"
-                            data-modal-title="Algemene voorwaarden &amp; privacybeleid">
+                        <button type="button" wire:click="$dispatch('openModal', {component: 'terms-and-conditions'})"
+                            class="font-medium text-red-600 decoration-2 hover:underline">
                             {{ $lang['labels']['terms_link'] }}
                         </button>
                     </div>
@@ -116,6 +110,4 @@
             </div>
         </div>
     </div>
-
-    
 </div>

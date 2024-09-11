@@ -12,7 +12,8 @@
         "laravel/tinker": "^2.9",
         "livewire/livewire": "^3.5",
         "owenvoke/blade-fontawesome": "^2.6",
-        "socialiteproviders/microsoft-azure": "^5.2"
+        "socialiteproviders/microsoft-azure": "^5.2",
+        "wire-elements/modal": "^2.0"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^3.1",

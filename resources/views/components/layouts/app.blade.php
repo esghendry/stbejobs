@@ -7,7 +7,10 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    {{-- Livewire --}}
+    @livewireStyles
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +23,9 @@
 
 <body class="h-full overflow-x-hidden font-roboto bg-gray-50">
 
+    {{-- Livewire --}}
+    @livewireScripts
+
     <header class="sticky top-0 z-40 w-full bg-gray-100 shadow-md">
         <nav>
             <!-- Primary Navigation Menu -->
@@ -29,8 +35,7 @@
                         <!-- Logo -->
                         <div class="shrink-0 flex items-center">
                             <a href="/" wire:navigate="">
-                                <img x-ref="logo1" src="https://esg.works/img/logo/x75/staffing-be-x75.png" alt="STBE"
-                                    class="inline-block h-12">
+                                <img src="https://esg.works/img/logo/x75/staffing-be-x75.png" alt="STBE" class="inline-block h-12">
                             </a>
                         </div>
                         <!-- Navigation Links -->
@@ -41,7 +46,11 @@
         </nav>
     </header>
 
-    {{ $slot }}
+    @livewire('wire-elements-modal')
+
+    <main class="flex-grow w-full overflow-hidden">
+        {{ $slot }}
+    </main>
 
     <footer class="text-base font-light text-white bg-staffing-dark-gray" style="border-bottom: 10px solid #dc3738;">
         <div class="container px-4 py-8 mx-auto font-thin max-w-7xl">
