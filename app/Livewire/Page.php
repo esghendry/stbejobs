@@ -38,7 +38,7 @@ class Page extends Component
                             Klaar voor een nieuwe uitdaging? Neem de eerste stap en laat je gegevens achter. Ons team
                             contacteert je binnen de 24 uur voor een eerste kennismaking. Zo kan je morgen al aan de
                             slag in je nieuwe job.',
-                'summary' => '<div class="px-2 py-2 text-xs font-medium text-gray-900">
+                'summary' => '<div class="text-xs font-medium text-gray-900">
                                         <div class="w-full text-base font-bold text-gray-900">Op zoek naar een job?
                                         </div>
                                         <span class=" whitespace-nowrap">Bij Staffing | ESG staan deze altijd

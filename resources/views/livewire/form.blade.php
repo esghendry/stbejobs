@@ -1,11 +1,11 @@
 <div>
-    <div class="px-2 py-2 pb-4 text-xs font-medium text-gray-900">
+    <div class="py-2 pb-4 text-xs font-medium text-gray-900">
         <div class="w-full text-base font-bold text-gray-900">
             {{ $lang['title'] }}
         </div>
         {{ $lang['subtitle'] }}
     </div>
-    <div class="grid grid-cols-4 gap-2 p-2 pb-6">
+    <div class="grid grid-cols-4 gap-2 pb-6">
         <input type="hidden" name="source" required="true" value="{{ $page->slug }}"
             class="hover:bg-blue-50 block py-2.5 px-1 w-full text-sm text-gray-900 border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 hover:border-blue-300 focus:border-blue-600 focus:bg-white peer"
             placeholder=" ">
@@ -69,13 +69,12 @@
             </div>
         </div>
 
-
         <div class="col-span-4">
             <label for="consent">
                 <div class="flex items-center">
                     <div class="flex">
                         <input id="consent" name="consent" type="checkbox" required=""
-                            class="shrink-0 mt-0.5 border-gray-200 hover:border-gray-400  rounded text-red-600 pointer-events-none focus:ring-red-500     ">
+                            class="shrink-0 mt-0.5 border-gray-200 hover:border-gray-400 rounded text-red-600 pointer-events-none focus:ring-red-500     ">
                     </div>
                     <div class="text-sm ms-3">
                         {{ $lang['labels']['terms'] }}
@@ -88,10 +87,7 @@
             </label>
         </div>
 
-
-        <div class="col-span-4">
-
-
+        <div class="col-span-4 mt-2">
             <div id="buttons">
                 <button type="submit" id="submit-button"
                     class="inline-flex items-center justify-center w-full px-3 py-2 text-sm font-medium text-white align-middle transition-all bg-green-600 border rounded-md shadow-sm hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-green-600">

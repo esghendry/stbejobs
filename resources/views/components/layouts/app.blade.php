@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="h-full overflow-x-hidden font-roboto bg-gray-50">
+<body class="font-roboto bg-gray-50">
 
     {{-- Livewire --}}
     @livewireScripts
