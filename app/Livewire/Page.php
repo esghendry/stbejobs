@@ -21,11 +21,11 @@ class Page extends Component
                 'title_2' => 'in België.',
                 'subtitle_1' => 'Morgen al starten',
                 'subtitle_2' => 'bij je nieuwe job in België.',
-                'body' => 'Zoek je een job in de <a href="https://cms.staffing-esg.be/logistiek"
+                'body' => 'Zoek je een job in de <a href="/logistiek"
                                 class="text-red-600 underline hover:no-underline">logistiek</a> of <a
-                                href="https://cms.staffing-esg.be/productie"
+                                href="/productie"
                                 class="text-red-600 underline hover:no-underline">productie</a> bij <a
-                                href="https://cms.staffing-esg.be/jouw-regio"
+                                href="/jouw-regio"
                                 class="text-red-600 underline hover:no-underline">jouw in de regio</a>? Staffing | ESG
                             helpt je snel aan werk. Van orderpicker tot operator, onze klanten zijn gevestigd in het
                             hele land, van Gent tot Genk. Er is volop keuze, of je nu op zoek bent naar een job in de
@@ -121,6 +121,7 @@ class Page extends Component
                                         Aan de slag in jouw regio, maar staat jouw job er niet tussen? Solliciteer
                                         gerust.
                                     </div>',
+                'image' => 'https://cms.staffing-esg.be/img/heftruck.png',
             ]);
         }
 
