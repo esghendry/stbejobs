@@ -21,7 +21,7 @@
 
 </head>
 
-<body class="font-roboto bg-gray-50">
+<body class="font-roboto bg-gray-50 flex flex-col w-full min-h-screen">
 
     {{-- Livewire --}}
     @livewireScripts

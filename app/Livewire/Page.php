@@ -15,7 +15,7 @@ class Page extends Component
         // check if $this->page is null
         if ($this->page === null) {
             $this->page = new PageModel([
-                'slug' => '',
+                'slug' => 'welcome',
                 'lang' => 'nl',
                 'title_1' => 'Aan de slag',
                 'title_2' => 'in België.',

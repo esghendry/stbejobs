@@ -26,6 +26,8 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property string|null $deleted_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\LeadAttachment> $attachments
+ * @property-read int|null $attachments_count
  * @property-read \App\Models\User|null $user
  * @method static \Illuminate\Database\Eloquent\Builder|Lead newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Lead newQuery()
@@ -43,6 +45,30 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Lead whereUserId($value)
  */
 	class Lead extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * 
+ *
+ * @property int $id
+ * @property int|null $lead_id
+ * @property string $name
+ * @property string $path
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Lead|null $lead
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment query()
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment whereLeadId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment wherePath($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|LeadAttachment whereUpdatedAt($value)
+ */
+	class LeadAttachment extends \Eloquent {}
 }
 
 namespace App\Models{

@@ -4,8 +4,11 @@ namespace App\Filament\Resources;
 
 use App\Filament\Resources\LeadResource\Pages;
 use App\Models\Lead;
+use App\Models\LeadAttachment;
 use App\Models\User;
+use Filament\Forms\Components\Actions\Action;
 use Filament\Forms\Components\Grid;
+use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
@@ -13,6 +16,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Storage;
 
 class LeadResource extends Resource
 {
@@ -51,6 +55,23 @@ class LeadResource extends Resource
                     ]),
 
                 // TODO::attachments
+                Repeater::make('attachments')
+                    ->relationship('attachments')
+                    ->columnSpanFull()
+                    ->deletable(false)
+                    ->addable(false)
+                    ->simple(
+                        TextInput::make('name')
+                            ->readOnly()
+                            ->suffixAction(
+                                Action::make('open')
+                                    ->icon('heroicon-o-link')
+                                    ->url(function (LeadAttachment $record) {
+                                        return Storage::disk('do')->url($record->path);
+                                    })
+                                    ->openUrlInNewTab()
+                            ),
+                    ),
             ]);
     }
 
@@ -75,12 +96,18 @@ class LeadResource extends Resource
                         'new' => 'heroicon-o-question-mark-circle',
                         'process' => 'heroicon-o-minus',
                         'processed' => 'heroicon-o-check',
+                    })
+                    ->formatStateUsing(fn (string $state): string => match ($state) {
+                        'new' => 'New',
+                        'process' => 'In process',
+                        'processed' => 'Processed',
                     }),
                 TextColumn::make('created_at')
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
+            ->defaultSort('created_at', 'desc')
             ->filters([
                 //
             ])
