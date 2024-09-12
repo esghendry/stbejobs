@@ -7,6 +7,14 @@
 
     <title>{{ $title ?? config('app.name') }}</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d94848">
+    <meta name="msapplication-TileColor" content="#793245">
+    <meta name="theme-color" content="#ffffff">
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     {{-- Livewire --}}
@@ -35,7 +43,8 @@
                         <!-- Logo -->
                         <div class="shrink-0 flex items-center">
                             <a href="/" wire:navigate="">
-                                <img src="https://esg.works/img/logo/x75/staffing-be-x75.png" alt="STBE" class="inline-block h-12">
+                                <img src="https://esg.works/img/logo/x75/staffing-be-x75.png" alt="STBE"
+                                    class="inline-block h-12">
                             </a>
                         </div>
                         <!-- Navigation Links -->
