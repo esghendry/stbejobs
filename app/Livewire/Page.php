@@ -121,7 +121,7 @@ class Page extends Component
                                         Aan de slag in jouw regio, maar staat jouw job er niet tussen? Solliciteer
                                         gerust.
                                     </div>',
-                'image' => 'https://cms.staffing-esg.be/img/heftruck.png',
+                'image' => 'jobs/pages/heftruck.webp',
             ]);
         }
 

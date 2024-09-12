@@ -14,8 +14,8 @@
             <div class="grid grid-cols-12 gap-6">
                 <div class="col-span-full sm:col-span-4">
                     <picture class="w-full">
-                        <source class="w-full" srcset="https://cms.staffing-esg.be/img/heftruck.webp" type="image/webp">
-                        <img class="w-full" src="{{ $page->image }}"
+                        {{-- <source class="w-full" srcset="https://cms.staffing-esg.be/img/heftruck.webp" type="image/webp"> --}}
+                        <img class="w-full" src="{{ Storage::disk('do')->url($page->image) }}"
                             alt="Heftruck chauffeur gezocht">
                     </picture>
                 </div>

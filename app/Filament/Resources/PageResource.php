@@ -50,20 +50,27 @@ class PageResource extends Resource
 
                 FileUpload::make('image')
                     ->disk('do')
-                    ->directory('pages')
+                    ->directory(function ($record) {
+                        return 'jobs/pages'.($record?->id ? '/'.$record->id : '');
+                    })
                     ->visibility('public'),
 
                 TinyEditor::make('body')
                     ->fileAttachmentsDisk('do')
-                    ->fileAttachmentsDirectory('pages')
+                    ->fileAttachmentsDirectory(function ($record) {
+                        return 'jobs/pages'.($record?->id ? '/'.$record->id : '');
+                    })
                     ->profile('full')
                     ->columnSpanFull()
                     ->minHeight(500),
 
                 TinyEditor::make('summary')
                     ->fileAttachmentsDisk('do')
-                    ->fileAttachmentsDirectory('pages')
-                    ->profile('full'),
+                    ->fileAttachmentsDirectory(function ($record) {
+                        return 'jobs/pages'.($record?->id ? '/'.$record->id : '');
+                    })
+                    ->profile('full')
+                    ->columnSpanFull(),
 
             ]);
     }

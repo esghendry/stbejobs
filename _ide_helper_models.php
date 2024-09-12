@@ -50,6 +50,7 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property string $slug
  * @property string|null $title_1
  * @property string|null $title_2
  * @property string|null $subtitle_1
@@ -68,6 +69,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereImage($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereLang($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Page whereSlug($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereSubtitle1($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereSubtitle2($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Page whereSummary($value)
