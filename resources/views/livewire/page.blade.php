@@ -59,7 +59,7 @@
             color: #bc1313;
             position: absolute;
             left: 0;
-            top: 3px;
+            top: 2px;
             width: 1em;
             height: 1em;
             background-repeat: no-repeat;
