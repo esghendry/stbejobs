@@ -88,12 +88,23 @@ class PageResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('title_2')
                     ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('created_at')
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('updated_at')
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\ReplicateAction::make()
+                    ->beforeReplicaSaved(function (Page $replica) {
+                        // make sure we get a unique slug using timestamp
+                        $replica['slug'] = $replica['slug'].'-'.time();
+
+                        return $replica;
+                    }),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
