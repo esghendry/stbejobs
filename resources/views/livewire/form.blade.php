@@ -97,7 +97,7 @@
                         <div class="text-sm ms-3">
                             {{ $lang['labels']['terms'] }}
                             <button type="button"
-                                wire:click="$dispatch('openModal', {component: 'terms-and-conditions'})"
+                                wire:click="$dispatch('openModal', {component: 'terms-and-conditions', arguments:{lang: '{{ $page->lang }}'}})"
                                 class="font-medium text-red-600 decoration-2 hover:underline">
                                 {{ $lang['labels']['terms_link'] }}
                             </button>
